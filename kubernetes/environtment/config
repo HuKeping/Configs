@@ -1,0 +1,25 @@
+# cd /etc/kubernetes
+#
+# kubernetes system config
+#
+# The following values are used to configure various aspectes of all
+# kubernetes services, including
+#
+#  kuber-apiserver.service
+#  kube-conftroller-manager.service
+#  kube-scheduler.service
+#  kubelet.service
+#  kube-proxy.service
+#
+
+# logging to stderr means we get it in the systemd journal
+KUBE_LOGTOSTDERR=" --logtostderr=true "
+
+# journal message level, 0 is debug
+KUBE_LOG_LEVEL=" --v=0 "
+
+# Should this cluster be allowed to run privileged docker containers
+KUBE_ALLOW_PRIV="--allow_privileged=false"
+
+# How the controller-manager, scheduler, and proxy find the apiserver
+KUBE_MASTER=" --master=http://kubernetes-master:8080"
