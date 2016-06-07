@@ -1,6 +1,7 @@
 # cd /usr/lib/systemd/system/
 #
-# Kubelet requires docker service
+# Kubelet requires docker service and the directory /var/lib/kubelet
+# is requried also.
 #
 [Unit]
 Description=Kubernetes Kubelet Server
