@@ -21,4 +21,10 @@ KUBE_SERVICE_ADDRESSES=" --service-cluster-ip-range=10.2.0.0/16 "
 KUBE_ADMISSION_CONTROL=" --admission_control=NamespaceAutoProvision,LimitRanger,SecurityContextDeny "
 
 # Add you own!
+#
+# For exmaple if  you want to enable Kubernetes Network Policy
+# before v1.3.0-realse, you might use:
+#
+# KUBE_API_ARGS=" --runtime-config=extensions/v1beta1,extensions/v1beta1/networkpolicies "
+#
 KUBE_API_ARGS=" "
